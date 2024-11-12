@@ -1,13 +1,16 @@
 function findOdd(nums) {
-  odd = 0;
-
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 === 0) {
-      odd = nums[i];
+    let count = 0;
+
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[i] === nums[j]) {
+        count++;
+      }
+    }
+    if (count % 2 !== 0) {
+      return nums[i];
     }
   }
-
-  return odd;
 }
 
 let result1 = findOdd([0]);

@@ -1,10 +1,10 @@
 function runningSum(arr) {
-  let newArr = [0];
-
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i] + newArr[i]);
+  let newArr = [arr[0]];
+  
+  for (let i = 1; i < arr.length; i++) {
+    newArr.push(arr[i] + newArr[i - 1]);
   }
-  newArr.shift();
+
   return newArr;
 }
 
